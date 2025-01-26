@@ -1,0 +1,18 @@
+name: YetAnotherLootManager
+version: '1.0-ALPHA'
+main: io.levysworks.yetAnotherLootManager.YetAnotherLootManager
+api-version: '1.21'
+prefix: YALM
+load: STARTUP
+authors: [ Levy. ]
+description: Plugin part of a loot management suite, used for custom dungeon loot generation.
+website: https://github.com/Levy-Y
+
+softdepend:
+  - Nexo
+
+commands:
+  yalm:
+    description: Reloads different parts of the YALM plugin.
+    usage: /yalm <reload|list>
+    permission: yalm.reload
