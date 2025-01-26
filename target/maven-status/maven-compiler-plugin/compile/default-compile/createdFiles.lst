@@ -1,9 +1,0 @@
-io\levysworks\yetAnotherLootManager\Models\DungeonDataModel$Range.class
-io\levysworks\yetAnotherLootManager\Models\DungeonDataModel$Dungeon.class
-io\levysworks\yetAnotherLootManager\Models\DungeonDataModel$Loot.class
-io\levysworks\yetAnotherLootManager\Listeners\LootGenerationListener.class
-io\levysworks\yetAnotherLootManager\Models\DungeonDataModel.class
-io\levysworks\yetAnotherLootManager\YetAnotherLootManager.class
-io\levysworks\yetAnotherLootManager\ConfigLoader.class
-io\levysworks\yetAnotherLootManager\Enums\Providers.class
-io\levysworks\yetAnotherLootManager\ReloadCommandExecutor.class
