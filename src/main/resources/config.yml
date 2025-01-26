@@ -7,20 +7,20 @@ dungeons:
   - name: "Haunted_Mines" # Dungeon identifier
     loot: # List of available items in the loot table
       - provider: "VANILLA" # Loot provider ex.: VANILLA, NEXO, ITEMSADDER
-        item: "minecraft:diamond" # The items identifier
+        item: "mace" # The items identifier
         amount:
           min: 1 # Minimum amount to generate
-          max: 3 # Maximum amount to generate
+          max: 1 # Maximum amount to generate
         chance: 0.5 # Chance to generate 0.5 = 50%
       - provider: "NEXO"
-        item: "dragon_heart"
+        item: "onyx_ore"
         amount:
           min: 1
-          max: 1
-        chance: 0.1
-      - provider: "MMOITEMS"
-        item: "magic_wand"
+          max: 5
+        chance: 0.3
+      - provider: "NEXO"
+        item: "amethyst"
         amount:
           min: 1
-          max: 2
-        chance: 0.2
+          max: 3
+        chance: 0.5
