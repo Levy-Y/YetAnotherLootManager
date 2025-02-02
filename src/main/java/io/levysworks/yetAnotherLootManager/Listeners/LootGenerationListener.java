@@ -14,16 +14,22 @@ import javax.annotation.Nullable;
 import java.util.Random;
 
 public class LootGenerationListener implements Listener {
+    /**
+     * Handles the loot generation process when a {@link LootGenerateEvent} is triggered.
+     * Customizes loot tables based on the configured dungeons and their loot specifications.
+     *
+     * @param event The {@link LootGenerateEvent} containing the loot table and context of the event.
+     */
     @EventHandler
     public void onLootGeneration(LootGenerateEvent event) {
-         if (!YetAnotherLootManager.dungeonDataModel.getEnabled()) return;
+         if (!YetAnotherLootManager.dungeonLootsDataModel.getEnabled()) return;
 
-         for (var dungeon : YetAnotherLootManager.dungeonDataModel.getDungeons()) {
+         for (var dungeon : YetAnotherLootManager.dungeonLootsDataModel.getDungeons()) {
 
              var dungeonName = "minecraft:chests/".concat(dungeon.getName());
              if (event.getLootTable().getKey().toString().equals(dungeonName)) {
 
-                 if (YetAnotherLootManager.dungeonDataModel.getOverride_vanilla()) {
+                 if (YetAnotherLootManager.dungeonLootsDataModel.getOverride_vanilla()) {
                      event.getLoot().clear();
                  }
 
@@ -34,7 +40,7 @@ public class LootGenerationListener implements Listener {
 
                      var chance = new Random().nextDouble();
 
-                     if (YetAnotherLootManager.dungeonDataModel.getOverride_vanilla()) {
+                     if (YetAnotherLootManager.dungeonLootsDataModel.getOverride_vanilla()) {
                          Bukkit.getLogger().warning("Rolled chance: " + chance + ", required chance: " + item.getChance());
                      }
 
@@ -52,6 +58,16 @@ public class LootGenerationListener implements Listener {
          }
     }
 
+    /**
+     * Generates a loot item based on the provided item ID, provider, and quantity range.
+     * The loot can be generated from either "VANILLA" or "NEXO" providers.
+     *
+     * @param itemID   The ID of the item to generate. Can be null if the provider handles null IDs.
+     * @param Provider The loot provider ("VANILLA" or "NEXO").
+     * @param min      The minimum quantity of the item to generate.
+     * @param max      The maximum quantity of the item to generate.
+     * @return The generated {@link ItemStack}, or null if the item could not be generated.
+     */
     public ItemStack GenerateLootItem(@Nullable String itemID, String Provider, Integer min, Integer max) {
          ItemStack item = null;
          int amount;
@@ -65,7 +81,7 @@ public class LootGenerationListener implements Listener {
          switch (Provider.toUpperCase()) {
              case "VANILLA": {
                 try {
-                    if (YetAnotherLootManager.dungeonDataModel.getDebug()) {
+                    if (YetAnotherLootManager.dungeonLootsDataModel.getDebug()) {
                         Bukkit.getLogger().info("Generating Vanilla Loot: " + itemID + ", with amount: " + amount);
                     }
 
@@ -92,7 +108,7 @@ public class LootGenerationListener implements Listener {
                      }
 
                  } catch (NoClassDefFoundError e) {
-                     if (YetAnotherLootManager.dungeonDataModel.getDebug()) {
+                     if (YetAnotherLootManager.dungeonLootsDataModel.getDebug()) {
                          Bukkit.getLogger().warning("Nexo cannot be found on the server!");
                      }
                  }

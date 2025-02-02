@@ -11,6 +11,14 @@
   <h4>*ItemsAdder coming soon*</h4>
 </div>
 
+<hr>
+
+<div align="center" style="border-radius: 21px;">
+  <img src=".github/media/showcase_2.gif" alt="Showcase 1" width="100%" style="border-radius: 20px;">
+  <br>
+  <h3>💥 Control what your players get from trial chambers! 🗝️</h3>
+</div>
+
 ---
 
 ## 🛠️ Config File Made Easy
@@ -18,7 +26,22 @@
 <div align="center">
   <img src=".github/media/config_preview.png" alt="Config Preview" width="90%" style="border-radius: 20px;">
   <h3>🔧 Effortlessly configure and customize to suit your needs!</h3>
+  <p><i>* Example: Structure loot config file *</i></p>
 </div>
+
+---
+
+## 📦 Modules
+**Yet Another Loot Manager** currently has the following sub-parts:
+
+- **Structure Loot** – Customize loot found in various generated structures.
+- **Trial Chambers** – Control rewards players receive from trial chambers.
+
+*🚧 Upcoming Modules*:
+
+- **Archaeology** – Manage loot from dig sites and excavation mechanics.
+- **Villager** – Adjust villager trades to your liking.
+- **Piglin** – Fine-tune Piglin bartering.
 
 ---
 

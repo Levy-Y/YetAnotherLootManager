@@ -1,5 +1,5 @@
 name: YetAnotherLootManager
-version: '1.0-ALPHA'
+version: '1.1'
 main: io.levysworks.yetAnotherLootManager.YetAnotherLootManager
 api-version: '1.21'
 prefix: YALM
@@ -14,5 +14,5 @@ softdepend:
 commands:
   yalm:
     description: Reloads different parts of the YALM plugin.
-    usage: /yalm <reload|list>
+    usage: /yalm <reload|list> [dungeon|trial]
     permission: yalm.reload

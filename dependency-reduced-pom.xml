@@ -4,7 +4,7 @@
   <groupId>io.levysworks</groupId>
   <artifactId>YetAnotherLootManager</artifactId>
   <name>YetAnotherLootManager</name>
-  <version>1.0-ALPHA</version>
+  <version>1.1</version>
   <build>
     <defaultGoal>clean package</defaultGoal>
     <resources>
@@ -31,6 +31,14 @@
             <goals>
               <goal>shade</goal>
             </goals>
+            <configuration>
+              <relocations>
+                <relocation>
+                  <pattern>com.fasterxml.jackson</pattern>
+                  <shadedPattern>io.levysworks.shaded.jackson</shadedPattern>
+                </relocation>
+              </relocations>
+            </configuration>
           </execution>
         </executions>
       </plugin>
